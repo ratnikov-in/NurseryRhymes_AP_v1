@@ -25,7 +25,7 @@ module.exports = {
   },
   properties: {
     ...timestamps,
-    text : {type: 'richtext'},
+    text : {type: 'textarea'},
     categories: {isArray: true},
     _id: { isVisible: false },
     createdAt: { isVisible: false }
