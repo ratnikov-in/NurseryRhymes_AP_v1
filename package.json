@@ -10,6 +10,7 @@
   "author": "Ratnikov IN",
   "license": "ISC",
   "dependencies": {
+    "@admin-bro/design-system": "^1.7.2",
     "@admin-bro/express": "^3.1.0",
     "@admin-bro/mongoose": "^1.1.0",
     "admin-bro": "^3.4.0",

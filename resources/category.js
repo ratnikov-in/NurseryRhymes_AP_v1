@@ -1,8 +1,7 @@
 const { sort, timestamps } = require('./sort')
-const { TextArea, TextAreaProps } = require('@admin-bro/design-system')
-const textService = require('../services/textService')
+const categoryService = require('../services/categoryService')
 module.exports = {
-  name: 'Стишки',
+  name: 'Категории',
   sort,
   actions: {
     show: {
@@ -13,7 +12,7 @@ module.exports = {
         
           if (request.method === "post") {
             console.log(request.fields);
-            let result = await textService.updateText(request.fields)
+            let result = await categoryService.updateCategory(request.fields)
             console.log(result);
           }
           return request
@@ -25,8 +24,6 @@ module.exports = {
   },
   properties: {
     ...timestamps,
-    text : {type: 'richtext'},
-    categories: {isArray: true},
     _id: { isVisible: false },
     createdAt: { isVisible: false }
   }

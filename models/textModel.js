@@ -6,6 +6,7 @@ const dataSchema = Schema({
     youtube: String,
     title: String,
     text: String,
+    categories: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
     created: { 
         type: Date,
         default: Date.now

@@ -5,6 +5,7 @@ const AdminBro = require('admin-bro')
 const AdminBroExpress = require('@admin-bro/express')
 const AdminBroOptions = require('./adminOpts')
 
+const { TextArea, TextAreaProps } = require('@admin-bro/design-system')
 const express = require('express')
 const app = express()
 
@@ -25,8 +26,8 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
   cookiePassword: 'somepassword',
 })
 
+app.use(express.static('static'))
 app.use(adminBro.options.rootPath, router)
-
 const run = async () => {
   const mongooseConnection = await mongoose.connect(uri)
   const server = app.listen(process.env.PORT, "0.0.0.0", () => {

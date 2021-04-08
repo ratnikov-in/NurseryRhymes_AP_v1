@@ -12,5 +12,10 @@ module.exports = {
     inputBck: '#192035',
     lightSuccess: '#008340',
     lightError: '#660040',
+  },
+  textarea: {
+    'admin-bro_Input': {
+      height: '150px'
+    }
   }
 }
