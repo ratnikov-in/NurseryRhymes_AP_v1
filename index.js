@@ -1,4 +1,4 @@
-const uri = "mongodb+srv://kcls_bot:Qwe123@cluster0.ms828.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "";
 
 const mongoose = require('mongoose')
 const AdminBro = require('admin-bro')
